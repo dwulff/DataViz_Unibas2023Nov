@@ -8,10 +8,10 @@
 
     <div align="center">
       <div id="header" align=left style="display:inline-block">
-        <h1>Einführung in die moderne Datenanalyse mit R</h1>
+        <h1>Visualizing and Communicating Data with R</h1>
         <span style="white-space: nowrap">
           <a href='https://therbootcamp.github.io'><i class='fas fa-home'></i></a>
-          <a href='https://therbootcamp.github.io/I2R_2023Sep'><i class='fas fa-clock'></i></a>
+          <a href='https://therbootcamp.github.io/DataViz_Unibas2023Nov'><i class='fas fa-clock'></i></a>
           <a href='mailto:therbootcamp@gmail.com'><i class='fas fa-envelope'></i></a>
           <a href='https://www.linkedin.com/company/basel-r-bootcamp/'><i class='fab fa-linkedin'></i></a>
           <a href='https://therbootcamp.github.io'>
@@ -21,7 +21,7 @@
         <br>
         <span style="white-space: nowrap">
           <img src='https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/by-sa.png' style= 'height:2rem; vertical-align:baseline'/>
-          <font style='font-size:2rem;font-style:normal;padding-left:8px'>September 2023</font>
+          <font style='font-size:2rem;font-style:normal;padding-left:8px'>November 2023</font>
         <span>
     </div>
 
@@ -36,18 +36,18 @@
         <col width=100%>
         <tr>
           <td align=left>
-            <h2>1 - Installiere Base-R und RStudio auf deinem Laptop.</h2>
+            <h2>1 - Install Base-R and RStudio on your computer.</h2>
             <h4>
-            Verwende die folgenden Links um die aktuellen Versionen von R und RStudio zu installieren.<br><br>
+            Use these links to install the latest versions of R and RStudio.<br><br>
 
-            <b>Installiere Base-R</b>:
-            <a href="https://cloud.r-project.org/bin/windows/base/R-4.3.1-win.exe">Windows</a>,
-            <a href="https://cloud.r-project.org/bin/macosx/base/R-4.2.3.pkg">Mac (Intel)</a>,
-  <a href="https://cloud.r-project.org/bin/macosx/big-sur-arm64/base/R-4.3.1-arm64.pkg">Mac (M1)</a><br>
+            <b>Install Base-R</b>:
+            <a href="https://cloud.r-project.org/bin/windows/base/R-4.2.1-win.exe">Windows</a>,
+            <a href="https://cloud.r-project.org/bin/macosx/base/R-4.2.1.pkg">Mac (Intel)</a>,
+  <a href="https://cloud.r-project.org/bin/macosx/big-sur-arm64/base/R-4.2.1-arm64.pkg">Mac (M1)</a><br>
 
             <b>Install RStudio</b>:
-            <a href="https://download1.rstudio.org/electron/windows/RStudio-2023.06.2-561.exe">Windows</a>,
-            <a href="https://download1.rstudio.org/electron/macos/RStudio-2023.06.2-561.dmg">Mac</a>
+            <a href="https://download1.rstudio.org/desktop/windows/RStudio-2022.07.2-576.exe">Windows</a>,
+            <a href="https://download1.rstudio.org/desktop/macos/RStudio-2022.07.2-576.dmg">Mac</a>
           </h4>
           </td>
         </tr>
@@ -57,30 +57,64 @@
         <col width=100%>
         <tr>
           <td align=left>
-            <h2>2 - Zoom</h2>
+            <h2>2 - Install additional packages</h2>
             <h4>
-            Wir werden den Kurs über die Software Zoom abhalten.<br><br>
+            This workshop introduces you to several specialized R packages that you will have to install. Please run the following command in your R Console of RStudio:<br><br>
 
-            Wenn ihr noch keinen Account habt, registriert Euch bitte (kostenlos) auf <a href="https://zoom.us/de-de/freesignup.html">https://zoom.us/de-de/freesignup.html</a>. Ladet bitte auch auf <a href="https://zoom.us/download#client_4meeting">https://zoom.us/download#client_4meeting</a> die Zoom App herunter und führt die Installation durch. Falls eine Installation der Software nicht möglich ist, gibt es auch die Möglichkeit Zoom über den Browser beizutreten.<br><br>
+            install.packages(c("tidyverse", "patchwork",
+                               "ggthemes", "ggrepel", "viridis", 
+                               "sf", "ggraph", "tidygraph", 
+                               "gganimate", "plotly",
+                               "rmarkdown", "knitr"),
+                               dependencies = TRUE)
+            
+            <br><br>
 
-            Während der Veranstaltung befinden wir uns durchgehend in einem Hauptkanal, mit der Möglichkeit während der Übungen in Breakout Rooms auszuweichen. Während der gesamten Veranstaltung bitten wir Euch als Default das Video ein- und das Mikrofon ausgeschaltet zu lassen. Ihr könnt selbstverständlich, wenn Ihr mögt, unter im Einstellungsmenu der App einen Hintergrund setzen um Eure Privatsphäre zu schützen. Um während der Veranstaltung Fragen zu stellen oder anderweitig mündlich etwas beizutragen, schaltet einfach (mit Leertaste oder Maus) vorübergehend Euer Mikrofon an. <br><br>
-
-            Wir fangen pünktlich um 13.00 Uhr an. Bitte findet Euch bereits 10 Minuten vorher im Zoom Meeting ein, um noch allenfalls auftretende technische Schwierigkeiten ausräumen zu können. Den Link zum Zoom meeting findet Ihr auf der Kursseite.
-
+            When you are asked whether to install packages from source, type in <b>"n"</b> and press Enter. <br><br>
           </h4>
           </td>
         </tr>
       </table>
 
+      <br><br>
+
       <table width=50% cellspacing=0 cellpadding=0 class="downloads">
         <col width=100%>
         <tr>
           <td align=left>
-            <h2>3 - Kursseite & Materialien</h2>
+            <h2>3 - Materials</h2>
             <h4>
-              Unter diesem Link <a href="https://therbootcamp.github.io/I2R_2023Sep">https://therbootcamp.github.io/I2R_2023Sep</a> findet Ihr die Kursseite mit allen Materialien und dem Link zum Zoom meeting.<br><br>
+             This page has all the materials <a href="https://therbootcamp.github.io/DataViz_Unibas2023Nov">https://therbootcamp.github.io/I2R_2022Oct</a>.<br><br>
 
-              Bitte ladet vor Kursbeginn das <a href="https://www.dropbox.com/scl/fi/da8jtzs7xdqjm7jnnsdeo/TheRBootcamp.zip?rlkey=x394wcea7msmnlvno7ashdm84&dl=1">Projekt</a> herunter, entpackt es (Doppelklick), und bewegt den darin enthaltenen Ordner “TheRBootcamp” auf den Desktop oder in einen anderen Ordner Eurer Wahl.
+              Please download the following project before the start of the course: <a href="https://www.dropbox.com/s/siwk0mqzr3dofc5/TheRBootcamp.zip?dl=1">Projekt</a>. Unpack it (double click) and move the folder “TheRBootcamp” to your Desktop or another folder of your choice.
+          </h4>
+          </td>
+        </tr>
+      </table>
+
+      <br><br>
+
+      <table width=50% cellspacing=0 cellpadding=0 class="downloads">
+        <col width=100%>
+        <tr>
+          <td align=left>
+            <h2>4 - Visualization sketch</h2>
+            <h4>
+             Please bring a data visualization sketch to the course. The sketch should contain a conceptual draft for a figure from your own work that you would like to improve and work on during the course. It should specify the data, the research question, the type of plot, the use of colors, the annotation, and so on. The sketch must either be hand-drawn (bring a digital photo) or created with design software (incl. Powerpoint or Keynote). If you find it difficult to come up with a sketch for your own work, feel free to create one for public data (e.g., from https://www.kaggle.com/datasets).         
+          </h4>
+          </td>
+        </tr>
+      </table>
+
+      <br><br>
+
+      <table width=50% cellspacing=0 cellpadding=0 class="downloads">
+        <col width=100%>
+        <tr>
+          <td align=left>
+            <h2>5 - Intro survey</h2>
+            <h4>
+             Please complete the following: <a href="https://forms.gle/aYZS2amq4QX1iEgeA"><b>intro questionnaire</b></a>.         
           </h4>
           </td>
         </tr>
@@ -91,9 +125,9 @@
       <table width=50% cellspacing=0 cellpadding=0 class="zoom">
         <tr>
           <td>
-            <a href="https://therbootcamp.github.io/I2R_2023Sep/" style="display:block;height:100%;width:100%">
+            <a href="https://therbootcamp.github.io/DataViz_Unibas2023Nov/" style="display:block;height:100%;width:100%">
               <div style="display:table;height:60px;width:100%">
-               <div style="display:table-cell;vertical-align:middle;text-align:center;width:100%;color:black"><h4>Zurück</h4></div>
+               <div style="display:table-cell;vertical-align:middle;text-align:center;width:100%;color:black"><h4>Back</h4></div>
              </div>
             </a>
           </td>
